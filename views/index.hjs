@@ -65,19 +65,19 @@ img{
                     <a href="#top" onclick=$("#menu-close").click();>Events Collection</a>
                 </li>
                 <li>
-                    <a href="#top" onclick=$("#menu-close").click();>Meet Up</a>
+                    <a href="#top" onclick=$("#menu-close").click();>Home</a>
                 </li>
                 <li>
-                    <a href="#about" onclick=$("#menu-close").click();>Food</a>
+                    <a href="#hotEvent" onclick=$("#menu-close").click();>Hottest Events</a>
                 </li>
                 <li>
-                    <a href="#services" onclick=$("#menu-close").click();>Sports</a>
+                    <a href="#services" onclick=$("#menu-close").click();>Service</a>
                 </li>
                 <li>
-                    <a href="#portfolio" onclick=$("#menu-close").click();>Musical</a>
+                    <a href="#portfolio" onclick=$("#menu-close").click();>Portfolio</a>
                 </li>
                 <li>
-                    <a href="#contact" onclick=$("#menu-close").click();>Movie</a>
+                    <a href="#contact" onclick=$("#menu-close").click();>Contact</a>
                 </li>
             </ul>
         </nav>
@@ -251,9 +251,9 @@ img{
 			   } else {
 			      mydate = data[i].date;
 			   }
-			   var mystr = "<h6>" + data[i].name + " <br/>" + mydate + " - " +
-				data[i].time + "<br/> <a style='color:green' href=" + data[i].link + ">" +
-			        data[i].link + "</a> </h6>";
+			   var mystr ="<h5>"  +  data[i].name + " <br/>" + mydate + " - " +
+				data[i].time + "<br/> <a class='iw-content'style='color:white;'  href=" + data[i].link + ">" +
+			        data[i].link +" </a> </h5>";
 			 //  console.log(mystr);
 			   infoWindowContent.push([mystr]);
                         }
@@ -310,19 +310,19 @@ img{
             var d = new Date();
             var n = d.getDate();
             document.getElementById("d0").innerHTML = "4/" + n;
-            document.getElementById("d1").innerHTML = "4/" + (n + 1);
-            document.getElementById("d2").innerHTML = "4/" + (n + 2);
-            document.getElementById("d3").innerHTML = "4/" + (n + 3);
-            document.getElementById("d4").innerHTML = "4/" + (n + 4);
-            document.getElementById("d5").innerHTML = "4/" + (n + 5);
-            document.getElementById("d6").innerHTML = "4/" + (n + 6);
-            document.getElementById("d7").innerHTML = "4/" + (n + 7);
-            document.getElementById("d8").innerHTML = "4/" + (n + 8);
-            document.getElementById("d9").innerHTML = "4/" + (n + 9);
-            document.getElementById("d10").innerHTML = "4/" + (n + 10);
-            document.getElementById("d11").innerHTML = "4/" + (n + 11);
-            document.getElementById("d12").innerHTML = "4/" + (n + 12);
-            document.getElementById("d13").innerHTML = "4/" + (n + 12);
+            document.getElementById("d1").innerHTML = "4/" + ((n + 1) % 31);
+            document.getElementById("d2").innerHTML = "4/" + ((n + 2) % 31);
+            document.getElementById("d3").innerHTML = "4/" + ((n + 3) % 31);
+            document.getElementById("d4").innerHTML = "4/" + ((n + 4) % 31);
+            document.getElementById("d5").innerHTML = "4/" + ((n + 5) % 31);
+            document.getElementById("d6").innerHTML = "4/" + ((n + 6) % 31);
+            document.getElementById("d7").innerHTML = "5/" + ((n + 7) % 31 + 1);
+            document.getElementById("d8").innerHTML = "5/" + ((n + 8) % 31 + 1);
+            document.getElementById("d9").innerHTML = "5/" + ((n + 9) % 31 + 1);
+            document.getElementById("d10").innerHTML = "5/" + ((n + 10) % 31 + 1);
+            document.getElementById("d11").innerHTML = "5/" + ((n + 11) % 31 + 1);
+            document.getElementById("d12").innerHTML = "5/" + ((n + 12) % 31 + 1);
+            document.getElementById("d13").innerHTML = "5/" + ((n + 13) % 31 + 1);
           }
 	</script>
            <br/>
@@ -398,10 +398,10 @@ img{
 
                 <div class="col-md-4">
                     <h3>Events Description</h3>
-                    <p>More than 85 million people around the world have experienced the awe-inspiring visual artistry, the unforgettable music, and the uniquely theatrical storytelling of this Broadway spectacular – one of the most breathtaking and beloved productions ever to grace the stage.</p> 
+                    <p>More than 85 million people around the world have experienced the awe-inspiring visual artistry, the unforgettable music, and the uniquely theatrical storytelling of this Broadway spectacular – one of the most breathtaking and beloved productions ever to grace the stage.</p>
                     <h3>Events Details</h3>
                     <ul>
-                        <li>Time :  Apri 19 7:30PM</li>
+                        <li>Time :  Apri 25 7:30PM</li>
                         <li>Location : FOX theatre</li>
                         <li>Link : http://www.fabulousfox.com/events/detail/lion-king</li>
                     </ul>
@@ -584,12 +584,16 @@ img{
     </section>
 
     <aside class="bg-dark">
-        <div class="container text-center">
-            <div class="call-to-action">
-                <h2>PLEASE SUBSCRIBE US NOW!</h2>
-                <a href="http://startbootstrap.com" class="btn btn-default btn-xl sr-button">SUBSCRIBE!</a>
-            </div>
-        </div>
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+          <h2 class="section-heading">How does it work!?</h2>
+          <hr class="primary">
+          <p>
+    Our site works off of a highly sophisticated daemon which scrapes multiple APIs to get the hottest new events in your area. Once the daemon loads the events into our databases, they then wait to be called by you, the user!
+
+    Use our integrated map to see what’s happening around you! When you slide the dates or check a box, a signal is sent to our backend, which pulls the data you specified! The results are then sent back to your browser to see what’s happening!
+
+          </p>
+      </div>
     </aside>
 
     <section id="contact">

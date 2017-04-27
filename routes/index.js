@@ -13,7 +13,7 @@ var app = express();
 app.use(bodyParser.json());
 
 router.get('/', function(req, res) {
-  var slideLoc = [ '1', '3'];
+  var slideLoc = [ '1', '15'];
 
   event.findAll(function(err, results){
       console.log('in cb');
